@@ -1,0 +1,72 @@
+.dateOption {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    margin: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+.headerText {
+    margin-top: -200px;
+    font-family: 'Calibri', ;
+    color: .646464;
+    font-size: 50px;
+    text-align: center;
+}
+
+.dateText{
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.date3 {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    margin: 15px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    background-image: url(https://cdn.discordapp.com/attachments/1022934247381676123/1027920750612582471/image0.jpg);
+    background-repeat: no-repeat;
+    background-position: -150% 80%;
+}
+
+.date3:hover {
+    background-image: url(https://cdn.discordapp.com/attachments/1022934247381676123/1027920750612582471/image0.jpg),url(https://cdn.discordapp.com/attachments/1022934247381676123/1027933858936664145/unknown_cleanup.png);
+    background-position: 40% 92%;
+    background-color: rgb(226,217,200);
+    transition: 1.2s;
+    margin-top: -15px;
+}
+
+h1 {
+    color: #EEE;
+    text-shadow: -1px -2px 3px rgba(17, 17, 17, 0.3);
+    text-align: center;
+    font-family: "Monsterrat", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 80px;
+    margin-bottom: -5px;
+  }
+  h1 underline {
+    border-top: 5px solid rgba(188, 26, 147, 0.3);
+    border-bottom: 5px solid rgba(188, 26, 147, 0.3);
+  }
+  h3 {
+    width: 570px;
+    margin-right:auto;
+    margin-left: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Monsterrat", sans-serif;
+    font-weight: 100;
+    text-shadow: -1px -2px 3px rgba(17, 17, 17, 0.3);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  img {
+    border-radius: 50%;
+  }

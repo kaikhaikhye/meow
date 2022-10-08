@@ -1,38 +1,294 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #f2dde6!important;
+}
+
+.top.text {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 140px;
+  color: #d774e0;
+  font-family: 'VT323', monospace;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+
+.wrapper {
+  height: 200px;
+  width: 300px;
+  background-color: #D0D0D0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  margin-bottom: 300px;
+}
+
+.lid {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one {
+  border-top: 100px solid #E1E1E1;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two {
+  border-top: 100px solid #E1E1E1;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #F6F6F6;
+  border-bottom: 100px solid #F6F6F6;
+  border-left: 150px solid #ECECEC;
+  z-index: 3;
+}
+
+.hovertext {
+  margin-top: -200px;
+  font-family: 'VT323', monospace;
+  color:#646464;
+  font-size: 24px;
+}
+
+.hovertext p {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.letter {
+  position: absolute;
+  top: 10px;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  z-index: 2;
+  background-image: url(https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/808fd4e033e7145.png), url(https://cdn.discordapp.com/attachments/1022934247381676123/1027208929819770880/xanipel-removebg-preview.png),url(https://cdn.discordapp.com/attachments/1022934247381676123/1027202091518795896/pngegg_3.png), url(https://cdn.discordapp.com/attachments/1022934247381676123/1027199030855479416/pngegg_2.png),url(https://art.pixilart.com/ce41a2c5e756954.png) , url(https://cdn.discordapp.com/attachments/1022934247381676123/1027186939377496094/pngegg_1.png) ,url(https://cdn.discordapp.com/attachments/1022934247381676123/1027186939700457522/pngegg.png), url(https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/499c0769b64bfd8.png),url(https://cdn.discordapp.com/attachments/1022934247381676123/1027197160292352030/Screenshot_2022-10-05_203427.png);
+  background-position: 101% 0%, 27% 67.5% , 29% 77.5%,11.5% 85.8%, 3% 84.5%, 37% 53.3%,14% 5% ,100% 100%;
+  background-size: 20% , 6%,3%, 3%, 3%,2% ,3%, 15% ,100% ;
+  background-repeat: no-repeat;
+  transition: 0.5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.letter p {
+  font-family: 'VT323', monospace;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom:-3px;
+  color: #3B4049;
+}
+
+.letter .lettertext{
+  font-family: 'VT323', monospace;
+  text-align: left;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: #3B4049;
+  line-height: normal;
+
+}
+.lettertext {
+  height: 100px;
+  font-size: 0!important;
+}
+
+.wrapper:hover .lid.one {
+  transform: rotateX(90deg);
+  transition-delay: 0s;
+}
+
+.wrapper:hover .lid.two {
+  transform: rotateX(180deg);
+  transition-delay: 0.25s;
+}
+
+.wrapper:hover .letter {
+  border-radius: 0px;
+  transform: translateY(-50px);
+  transform: scale(4);
+  height: 90%;
+  width: 120%;
+  transition-delay: 0.6s;
+  z-index: 10;
+}
+
+.wrapper:hover p {
+  font-size: 8px;
+  transition-delay: 0.6s;
+  margin-left: 10px;
+  margin-top: 10px;
+
+}
+
+.wrapper:hover .lettertext {
+  opacity: 100;
+  font-size: 8px!important;
+  transition-delay: 0.7s;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/* flower */
+
+.nav-item {
+  height: 50px;
+  margin: 60px auto;
+  position: relative;
+  width: 300px;
+}
+
+
+.flower {
+  animation-play-state: running;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  background-image: url(https://cdn.discordapp.com/attachments/1022934247381676123/1026390685873619005/output-onlinepngtools_2.png);
+  background-size: cover;
+  height: 28px;
+  position: absolute;
+  width: 28px;
+}
+
+.flower:nth-child(1) {
+  animation-delay: 0s;
+  animation-duration: 4s;
+  animation-name: flower-keyframes;
+  left: 7px;
+  top: -5px;
+}
+
+.flower:nth-child(2) {
+  animation-delay: -2s;
+  animation-duration: 3s;
+  animation-name: flower-keyframes-alt;
+  top: -2px;
+  left: 270px;
+}
+
+@keyframes flower-keyframes {
+  0% {
+    transform: rotate(10deg) scale(1.5) translateY(0px);
+  }
+
+  40% {
+    transform: rotate(-5deg) scale(2) translateY(1px);
+  }
+
+  100% {
+    transform: rotate(10deg) scale(1.5) translateY(0px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes flower-keyframes-alt {
+  0% {
+    transform: rotate(-2deg) scale(1.5) translateY(0px);
   }
-  to {
-    transform: rotate(360deg);
+
+  45% {
+    transform: rotate(7deg) scale(2) translateY(1px);
+  }
+
+  100% {
+    transform: rotate(-2deg) scale(1.5) translateY(0px);
   }
 }
+
+/* background */
+
+.heart {
+  display: block;
+  width: 1em;
+  height: 1em;
+  animation-duration: 5s;
+  animation-name: heart-keyframes;
+  animation-play-state: running;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow:
+    1em 0em #F22613,
+    2em 0em #F22613,
+    4em 0em #F22613,
+    5em 0em #F22613,
+
+    0em 1em #F22613,
+    1em 1em #F22613,
+    2em 1em #F22613,
+    3em 1em #F22613,
+    4em 1em #F22613,
+    5em 1em #F22613,
+    6em 1em #F22613,
+
+    0em 2em #F22613,
+    1em 2em #F22613,
+    2em 2em #F22613,
+    3em 2em #F22613,
+    4em 2em #F22613,
+    5em 2em #F22613,
+    6em 2em #F22613,
+
+    1em 3em #F22613,
+    2em 3em #F22613,
+    3em 3em #F22613,
+    4em 3em #F22613,
+    5em 3em #F22613,
+
+    2em 4em #F22613,
+    3em 4em #F22613,
+    4em 4em #F22613,
+
+    3em 5em #F22613;
+}
+
+@keyframes heart-keyframes {
+  0% {
+    transform: scale(0.3) translateY(-65px) translateX(-72px);
+  }
+
+  50% {
+    transform: scale(0.3) translateY(-65px) translateX(-72px);
+  }
+
+  100% {
+    transform: scale(0.3) translateY(-65px) translateX(-72px);
+  }
+}
+
